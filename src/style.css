@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'LibreFranklin';
+  src: url('./LibreFranklin-Black copy.ttf') format('truetype');
+    /* url('./LibreFranklin-Black copy.ttf') format('woff'); */
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hello {
+  color: red;
+  font-family: 'LibreFranklin';
+  background: url('./sun copy.jpg');
+}
