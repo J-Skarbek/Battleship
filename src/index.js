@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import './style.css';
 import TestImg from './sun copy.jpg';
-import printMe from './print.js';
+import printMe from './print';
 import shipFactory from './ship';
+// import { ShipPrototype } from './ship';
 
 function component() {
   const element = document.createElement('div');

@@ -1,8 +1,20 @@
+// const ShipPrototype = () => {
+//   const onHit = (numberOfHits) => {
+//     numberOfHits += 1;
+//     if (numberOfHits === length) {
+//       isSunk = true;
+//       return isSunk;
+//     }
+//     return numberOfHits;
+//   };
+//   return { onHit };
+// };
+
 const shipFactory = (length) => {
   let isSunk = false;
   let numberOfHits = 0;
+  // const { onHit } = ShipPrototype();
   const onHit = () => {
-    // let numberOfHits = 0;
     numberOfHits += 1;
     if (numberOfHits === length) {
       isSunk = true;
@@ -17,4 +29,5 @@ const shipFactory = (length) => {
   };
 };
 
+// export { ShipPrototype };
 export default shipFactory;
