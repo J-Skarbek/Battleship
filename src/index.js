@@ -11,11 +11,11 @@ function component() {
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
   element.classList.add('hello');
 
-   // Add the image to our existing div.
-   const myIcon = new Image();
-   myIcon.src = TestImg;
- 
-   element.appendChild(myIcon);
+  // Add the image to our existing div.
+  const myIcon = new Image();
+  myIcon.src = TestImg;
+
+  element.appendChild(myIcon);
 
   btn.innerHTML = 'Click me and check the console!';
   btn.onclick = printMe;
@@ -28,4 +28,19 @@ function component() {
 document.body.appendChild(component());
 
 const destroyer = shipFactory(4);
-console.log(destroyer.length, destroyer.isSunk);
+
+function consoleTest() {
+  console.log(destroyer.length, destroyer.isSunk);
+}
+
+function hitShip() {
+  console.log(destroyer.onHit());
+}
+
+consoleTest();
+hitShip();
+hitShip();
+hitShip();
+hitShip();
+hitShip();
+consoleTest();
