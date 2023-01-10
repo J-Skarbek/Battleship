@@ -1,8 +1,8 @@
 import shipFactory from '../ship';
 
-test('Ship Factory is returning isSunk as false by default', () => {
+test('Ship Factory is returning undefined for the private proerty isSunk', () => {
   const destroyer = shipFactory(4);
-  expect(destroyer.isSunk).not.toBeDefined();
+  expect(destroyer.isSunk).toBeUndefined();
 });
 
 test('Ship Factory is returning isSunk as true once the hits equal the length of the ship', () => {
