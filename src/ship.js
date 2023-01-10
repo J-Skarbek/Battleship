@@ -1,14 +1,17 @@
-const shipFactory = (length, name) => {
+const shipFactory = (length) => {
   const isSunk = false;
-  const numberofHits = 0;
+  const numberOfHits = 0;
   const statusReport = (length) => {
-    if (numberOfHits = length) {
+    if (numberOfHits === length) {
       isSunk = true;
     }
   };
   return {
     length,
-    name,
     isSunk,
   };
 };
+
+const destroyer = shipFactory(4);
+
+export default shipFactory;

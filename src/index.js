@@ -2,6 +2,7 @@ import _ from 'lodash';
 import './style.css';
 import TestImg from './sun copy.jpg';
 import printMe from './print.js';
+import shipFactory from './ship';
 
 function component() {
   const element = document.createElement('div');
@@ -25,3 +26,6 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+const destroyer = shipFactory(4);
+console.log(destroyer.length, destroyer.isSunk);
