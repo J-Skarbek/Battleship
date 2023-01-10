@@ -16,12 +16,13 @@ const shipFactory = (length) => {
   // const { onHit } = ShipPrototype();
   const onHit = () => {
     numberOfHits += 1;
-    if (numberOfHits === length) {
+    if (numberOfHits >= length) {
       isSunk = true;
       return isSunk;
     }
     return numberOfHits;
   };
+
   return {
     length,
     isSunk,

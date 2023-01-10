@@ -38,6 +38,9 @@ function hitShip() {
   console.log(destroyer.onHit());
 }
 
+// destroyer.onHit();
+// destroyer.onHit();
+
 consoleTest();
 hitShip();
 hitShip();
