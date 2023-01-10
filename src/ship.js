@@ -25,7 +25,7 @@ const shipFactory = (length) => {
 
   return {
     length,
-    isSunk,
+    // isSunk,
     onHit,
   };
 };
