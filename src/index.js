@@ -2,8 +2,9 @@ import _ from 'lodash';
 import './style.css';
 import TestImg from './sun copy.jpg';
 import printMe from './print';
-import shipFactory from './ship';
+// import shipFactory from './ship';
 // import { ShipPrototype } from './ship';
+import gameBoardFactory from './gameBoard';
 
 function component() {
   const element = document.createElement('div');
@@ -48,3 +49,5 @@ document.body.appendChild(component());
 // hitShip();
 // hitShip();
 // consoleTest();
+
+gameBoardFactory();
