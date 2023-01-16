@@ -1,17 +1,15 @@
-import createBoardContainer from './gameBoardElements';
+import { createBoardContainer, createCoordinateDivs } from './gameBoardElements';
 
 const gameBoardFactory = () => {
   const gameBoard = createBoardContainer();
-  // const gameCoordinates = createCoords();
   const coordinateArray = [];
-
   for (let coordinate = 0; coordinate < 100; coordinate += 1) {
     coordinateArray.push(coordinate);
   }
+  createCoordinateDivs(coordinateArray);
 
   return {
     gameBoard,
-    // gameCoordinates,
     coordinateArray,
   };
 };

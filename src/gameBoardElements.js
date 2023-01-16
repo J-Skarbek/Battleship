@@ -6,24 +6,13 @@ function createBoardContainer() {
   return boardContainer;
 }
 
-export default createBoardContainer;
+function createCoordinateDivs(coordinateArray) {
+  const selectGameBoard = document.querySelector('.game-container');
+  coordinateArray.forEach((coordinate) => {
+    const createCoordDiv = document.createElement('div');
+    createCoordDiv.classList.add('coordinate');
+    selectGameBoard.appendChild(createCoordDiv);
+  });
+}
 
-// export function createCoords() {
-//   const selectGameBoard = document.querySelector('.game-container');
-//   const createCoordinate = () => {
-//     const createCoord = document.createElement('div');
-//     createCoord.classList.add('coordinate');
-//     selectGameBoard.appendChild(createCoord);
-//   };
-//   for (let coordinates = 0; coordinates < 100; coordinates += 1) {
-//     createCoordinate();
-//   }
-// }
-
-// export function createCoordinateDivs() {
-//   const selectGameBoard = document.querySelector('.game-container');
-//   const allCoords = Array.from(document.querySelectorAll('.coordinate'));
-//   allCoords.forEach((coordinate) => {
-//     selectGameBoard.appendChild(coordinate);
-//   });
-// }
+export { createBoardContainer, createCoordinateDivs };
