@@ -1,29 +1,19 @@
-import { createCoords, createBoardContainer } from './gameBoardElements';
+import createBoardContainer from './gameBoardElements';
 
 const gameBoardFactory = () => {
   const gameBoard = createBoardContainer();
-  const gameCoordinates = createCoords();
+  // const gameCoordinates = createCoords();
+  const coordinateArray = [];
+
+  for (let coordinate = 0; coordinate < 100; coordinate += 1) {
+    coordinateArray.push(coordinate);
+  }
 
   return {
     gameBoard,
-    gameCoordinates,
+    // gameCoordinates,
+    coordinateArray,
   };
 };
-//   createBoardContainer();
-//   for (let coordinates = 0; coordinates < 100; coordinates += 1) {
-//   createCoordinate();
-//   }
-// }
-
-// const gameBoardFactory = () => {
-//   const createBoardGrid = () => {
-//     for (let i = 0; i < 100; i += 1) {
-//       createGridSquare();
-//     }
-//   };
-//   const initNewGrid = () => {
-//     createBoardGrid();
-//   };
-// };
 
 export default gameBoardFactory;

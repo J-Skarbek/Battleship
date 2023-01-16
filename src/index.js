@@ -29,25 +29,6 @@ function component() {
 
 document.body.appendChild(component());
 
-// const destroyer = shipFactory(4);
+const gameBoardOne = gameBoardFactory();
 
-// function consoleTest() {
-//   console.log(destroyer.length, destroyer.isSunk);
-// }
-
-// function hitShip() {
-//   console.log(destroyer.onHit());
-// }
-
-// destroyer.onHit();
-// destroyer.onHit();
-
-// consoleTest();
-// hitShip();
-// hitShip();
-// hitShip();
-// hitShip();
-// hitShip();
-// consoleTest();
-
-gameBoardFactory();
+console.log(gameBoardOne.coordinateArray);
