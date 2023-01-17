@@ -34,6 +34,13 @@ const gameBoardFactory = () => {
     return battleship;
   }
 
+  function placeShipBattleshipTest(coordinate) {
+    const findArrayItem = coordinateArray.find(({ value }) => value === coordinate);
+    console.log(findArrayItem);
+    findArrayItem.occupancy = 'occupied';
+    console.log(findArrayItem);
+  }
+
   // const receiveAttack = x => {
   //   if ( x === 'emtpy' ) {
   //     const missedMsg = 'The attack missed.';
@@ -50,6 +57,7 @@ const gameBoardFactory = () => {
     placeShipDestroyer,
     placeShipCruiser,
     placeShipBattleship,
+    placeShipBattleshipTest,
     // receiveAttack,
     missedAttacks,
     shipsSunk,

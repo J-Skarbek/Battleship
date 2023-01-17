@@ -24,6 +24,15 @@ const shipFactory = (length, type) => {
     return numberOfHits;
   };
 
+  // function onHit() {
+  //   this.numberOfHits += 1;
+  //   if (this.numberOfHits >= length) {
+  //     this.isSunk = true;
+  //     return this.isSunk;
+  //   }
+  //   return this.numberOfHits;
+  // }
+
   return {
     shipType,
     length,

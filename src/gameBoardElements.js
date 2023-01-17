@@ -17,4 +17,8 @@ function createCoordinateDivs(coordinateArray) {
   });
 }
 
+// function updateCoordOccupancy(coordniate, coordinateArray) {
+
+// }
+
 export { createBoardContainer, createCoordinateDivs };
