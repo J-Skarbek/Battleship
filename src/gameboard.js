@@ -5,26 +5,43 @@ const gameBoardFactory = () => {
   const gameBoard = createBoardContainer();
   const missedAttacks = [];
   const coordinateArray = [];
-  const shipsSunk = 0;
+  let shipsPlaced = 0;
+  let shipsSunk = 0;
   for (let coordinate = 0; coordinate < 100; coordinate += 1) {
     coordinateArray.push(coordinate);
   }
   createCoordinateDivs(coordinateArray);
 
-  const placeShip = () => {
+  function placeShipDestroyer() {
     const destroyer = shipFactory(3, 'destroyer');
+    this.shipsPlaced += 1;
     return destroyer;
-  };
+  }
+
+  function placeShipCruiser() {
+    const cruiser = shipFactory(5, 'cruiser');
+    this.shipsPlaced += 1;
+    return cruiser;
+  }
+
+  function placeShipBattleship() {
+    const battleship = shipFactory(4, 'battleship');
+    this.shipsPlaced += 1;
+    return battleship;
+  }
 
   const receiveAttack = (x, y) => console.log(x, y);
 
   return {
     gameBoard,
     coordinateArray,
-    placeShip,
+    placeShipDestroyer,
+    placeShipCruiser,
+    placeShipBattleship,
     receiveAttack,
     missedAttacks,
     shipsSunk,
+    shipsPlaced,
   };
 };
 
