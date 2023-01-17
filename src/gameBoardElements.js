@@ -11,7 +11,8 @@ function createCoordinateDivs(coordinateArray) {
   coordinateArray.forEach((coordinate) => {
     const createCoordDiv = document.createElement('div');
     createCoordDiv.classList.add('coordinate');
-    createCoordDiv.dataset.coordinate = coordinate;
+    createCoordDiv.dataset.coordinate = coordinate.value;
+    createCoordDiv.dataset.occupancy = coordinate.occupancy;
     selectGameBoard.appendChild(createCoordDiv);
   });
 }

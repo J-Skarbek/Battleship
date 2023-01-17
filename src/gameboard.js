@@ -7,7 +7,11 @@ const gameBoardFactory = () => {
   const coordinateArray = [];
   let shipsPlaced = 0;
   let shipsSunk = 0;
-  for (let coordinate = 0; coordinate < 100; coordinate += 1) {
+  for (let i = 0; i < 100; i += 1) {
+    const coordinate = {
+      value: i,
+      occupancy: 'empty',
+    };
     coordinateArray.push(coordinate);
   }
   createCoordinateDivs(coordinateArray);
@@ -30,16 +34,15 @@ const gameBoardFactory = () => {
     return battleship;
   }
 
-  const receiveAttack = x => {
-    if ( x === 'emtpy' ) {
-      const missedMsg = 'The attack missed.';
-      return missedMsg;
-    } elseif (x === 'occupied') {
-      const hitMsg = 'The attack was successful.';
-      return hitMsg;
-    }
-  }
-  
+  // const receiveAttack = x => {
+  //   if ( x === 'emtpy' ) {
+  //     const missedMsg = 'The attack missed.';
+  //     return missedMsg;
+  //   } elseif (x === 'occupied') {
+  //     const hitMsg = 'The attack was successful.';
+  //     return hitMsg;
+  //   }
+  // }
 
   return {
     gameBoard,
@@ -47,7 +50,7 @@ const gameBoardFactory = () => {
     placeShipDestroyer,
     placeShipCruiser,
     placeShipBattleship,
-    receiveAttack,
+    // receiveAttack,
     missedAttacks,
     shipsSunk,
     shipsPlaced,
