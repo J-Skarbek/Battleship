@@ -14,3 +14,8 @@ test('gameboard factory calls the gameboard reference and gets a true response',
   const boardTwo = gameBoardFactory();
   expect(boardTwo.gameBoard).toBeTruthy();
 });
+
+test('gameboard factory calls the placeship function and can get values from it', () => {
+  const boardThree = gameBoardFactory();
+  expect(boardThree.placeShip().shipType).toBe('destroyer');
+});
