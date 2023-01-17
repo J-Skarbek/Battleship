@@ -10,7 +10,8 @@
 //   return { onHit };
 // };
 
-const shipFactory = (length) => {
+const shipFactory = (length, type) => {
+  const shipType = type;
   let isSunk = false;
   let numberOfHits = 0;
   // const { onHit } = ShipPrototype();
@@ -24,6 +25,7 @@ const shipFactory = (length) => {
   };
 
   return {
+    shipType,
     length,
     onHit,
   };

@@ -1,4 +1,5 @@
 import { createBoardContainer, createCoordinateDivs } from './gameBoardElements';
+import shipFactory from './ship';
 
 const gameBoardFactory = () => {
   const gameBoard = createBoardContainer();
@@ -8,9 +9,15 @@ const gameBoardFactory = () => {
   }
   createCoordinateDivs(coordinateArray);
 
+  const placeShip = () => {
+    const destroyer = shipFactory(3, 'destroyer');
+    return destroyer;
+  };
+
   return {
     gameBoard,
     coordinateArray,
+    placeShip,
   };
 };
 
