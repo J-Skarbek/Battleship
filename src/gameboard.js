@@ -30,7 +30,16 @@ const gameBoardFactory = () => {
     return battleship;
   }
 
-  const receiveAttack = (x, y) => console.log(x, y);
+  const receiveAttack = x => {
+    if ( x === 'emtpy' ) {
+      const missedMsg = 'The attack missed.';
+      return missedMsg;
+    } elseif (x === 'occupied') {
+      const hitMsg = 'The attack was successful.';
+      return hitMsg;
+    }
+  }
+  
 
   return {
     gameBoard,

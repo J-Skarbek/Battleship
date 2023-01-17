@@ -31,5 +31,5 @@ document.body.appendChild(component());
 
 const gameBoardOne = gameBoardFactory();
 
-console.log(gameBoardOne.coordinateArray);
-console.log(gameBoardOne.placeShip());
+// console.log(gameBoardOne.coordinateArray);
+// console.log(gameBoardOne.placeShip());
