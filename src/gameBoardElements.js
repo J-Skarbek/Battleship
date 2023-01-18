@@ -18,8 +18,7 @@ function createCoordinateDivs(coordinateArray) {
 }
 
 function updateCoordinateOccupancy(item) {
-  const getDiv = document.querySelector(`[data-coordinate="${item.value}"]`);
-  getDiv.dataset.occupancy = 'occupied';
+  document.querySelector(`[data-coordinate="${item.value}"]`).dataset.occupancy = 'occupied';
 }
 
 export { createBoardContainer, createCoordinateDivs, updateCoordinateOccupancy };
