@@ -31,13 +31,9 @@ document.body.appendChild(component());
 
 const gameBoardOne = gameBoardFactory();
 
-// console.log(gameBoardOne.coordinateArray);
+// gameBoardOne.placeShipBattleshipTest(7, 4, 'battleship');
 
-// gameBoardOne.placeShipBattleshipTest(47);
-// gameBoardOne.placeShipBattleshipTest(15);
-gameBoardOne.placeShipBattleshipTest(7);
-// gameBoardOne.placeShipBattleshipTest(88);
+console.log(gameBoardOne.placeShipBattleshipTest(7, 4, 'battleship'));
+console.log(gameBoardOne.placeShipBattleshipTest(7, 4, 'battleship').shipType);
 
 console.log(gameBoardOne.coordinateArray);
-// console.log(gameBoardOne.coordinateArray);
-// console.log(gameBoardOne.placeShip());

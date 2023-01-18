@@ -17,8 +17,9 @@ function createCoordinateDivs(coordinateArray) {
   });
 }
 
-// function updateCoordOccupancy(coordniate, coordinateArray) {
+function updateCoordinateOccupancy(item) {
+  const getDiv = document.querySelector(`[data-coordinate="${item.value}"]`);
+  getDiv.dataset.occupancy = 'occupied';
+}
 
-// }
-
-export { createBoardContainer, createCoordinateDivs };
+export { createBoardContainer, createCoordinateDivs, updateCoordinateOccupancy };
