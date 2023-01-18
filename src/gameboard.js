@@ -1,3 +1,4 @@
+import { find } from 'lodash';
 import { createBoardContainer, createCoordinateDivs } from './gameBoardElements';
 import shipFactory from './ship';
 
@@ -36,9 +37,17 @@ const gameBoardFactory = () => {
 
   function placeShipBattleshipTest(coordinate) {
     const findArrayItem = coordinateArray.find(({ value }) => value === coordinate);
-    console.log(findArrayItem);
-    findArrayItem.occupancy = 'occupied';
-    console.log(findArrayItem);
+    const additionalCoords = coordinate + 4;
+    const shipCoords = coordinateArray.slice(coordinate, additionalCoords);
+    shipCoords.forEach((bsCoordinate) => {
+      bsCoordinate.occupancy = 'occupied';
+    });
+    console.log(shipCoords);
+    // console.log(searchValue);
+    console.log(coordinate);
+    console.log(typeof coordinate);
+    // findArrayItem.occupancy = 'occupied';
+    // console.log(findArrayItem);
   }
 
   // const receiveAttack = x => {

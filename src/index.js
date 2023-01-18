@@ -31,12 +31,13 @@ document.body.appendChild(component());
 
 const gameBoardOne = gameBoardFactory();
 
-console.log(gameBoardOne.coordinateArray);
+// console.log(gameBoardOne.coordinateArray);
 
 // gameBoardOne.placeShipBattleshipTest(47);
 // gameBoardOne.placeShipBattleshipTest(15);
-// gameBoardOne.placeShipBattleshipTest(7);
+gameBoardOne.placeShipBattleshipTest(7);
 // gameBoardOne.placeShipBattleshipTest(88);
 
 console.log(gameBoardOne.coordinateArray);
+// console.log(gameBoardOne.coordinateArray);
 // console.log(gameBoardOne.placeShip());
